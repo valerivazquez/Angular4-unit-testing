@@ -1,0 +1,82 @@
+<label for="">{{tipoAccion}}</label>
+<!--
+  <md-input-container>
+<input mdInput  type="text" ngModel="Nueva Tarea">
+</md-input-container>
+-->
+<br><br><br>
+
+<div *ngIf="tipoAccion == 'Modificar Tarea'">
+<a [routerLink]="['/movimientos/']">Nueva Tarea</a> 
+</div>
+<br>
+
+<md-input-container>
+<input mdInput placeholder="Fecha Inici" type="datetime-local" [(ngModel)]="movimiento.fechaStart">
+</md-input-container>
+<br>
+<md-input-container>
+<input mdInput placeholder="Fecha Final" type="datetime-local" [(ngModel)]="movimiento.fechaEnd">
+</md-input-container>
+<br>
+
+<label for="">Proyecto</label>
+<select name="proyecto" [(ngModel)]="movimiento.proyecto">
+    <option 
+        *ngFor="let proyecto of proyectos"
+        [value]="proyecto.id"> 
+        {{proyecto.text}} 
+    </option>
+</select>
+<br><br>
+
+<md-input-container>
+  <input mdInput placeholder="Expedientes Finalizados" type="number" [(ngModel)]="movimiento.expedientesFinalizados">
+</md-input-container>
+<br>
+<md-input-container>
+  <input mdInput placeholder="Expedientes Revisados" type="number" [(ngModel)]="movimiento.expedientesRevisados">
+</md-input-container>
+<br>
+<md-input-container>
+  <input mdInput placeholder="Expedientes Incidentados" type="number" [(ngModel)]="movimiento.expedientesIncidentados">
+</md-input-container>
+<br>
+<md-input-container>
+  <textarea mdInput placeholder="Notas" [(ngModel)]="movimiento.notas"></textarea>
+
+<!--<textarea placeholder="Notas" type="text" [(ngModel)]="movimiento.notas"> -->
+</md-input-container>
+<br>
+<!--
+<md-input-container>
+<input mdInput placeholder="Importe" type="number" [(ngModel)]="movimiento.importe">
+</md-input-container>
+<br>
+<md-radio-group [(ngModel)]="movimiento.tipo" (ngModelChange)="usuarioCambioRadioButton()">
+  <md-radio-button *ngFor="let tipo of tipos" [value]="tipo.id">
+    {{tipo.text}}
+  </md-radio-button>
+</md-radio-group>
+<br>
+<br>
+<label for="">Categoría</label>
+<select name="categoria" [(ngModel)]="movimiento.categoria">
+    <option 
+        *ngFor="let categoria of categorias"
+        [value]="categoria.id"> 
+        {{categoria.text}} 
+    </option>
+</select>
+<br>
+-->
+
+<div>
+  <button md-button color="primary" (click)="guardarMovimiento()">Guardar</button>
+</div>
+<br>
+<!--
+<md-card>
+  {{ movimiento | json}}
+</md-card>
+-->

@@ -1,0 +1,16 @@
+<p>
+  seguridad works!
+</p>
+<section >
+    <md-input-container>
+    <input mdInput placeholder="Email" type="email" [(ngModel)]="usuario.email"><
+   </md-input-container>
+    <br>
+    <md-input-container>
+    <input mdInput placeholder="Password" type="password" [(ngModel)]="usuario.password">
+    </md-input-container>
+    <br>
+    <button md-button color="primary" (click)="registrarUsuario()">Registrar nuevo usuario</button>
+    <button md-button color="warn" (click)="entrarUsuario()">Entrar como miembro</button>
+</section>
+{{ mensaje }}

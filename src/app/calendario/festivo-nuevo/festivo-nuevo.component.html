@@ -1,0 +1,104 @@
+
+<label for="">{{tipoAccion}}</label>
+
+<br><br><br>
+
+<div *ngIf="tipoAccion == 'Modificar Año-Festivos'">
+<a [routerLink]="['/festivos/']">Nueva Tarea</a> 
+</div>
+<br>
+
+
+
+
+
+<br>
+<md-input-container>
+<input mdInput placeholder="Año" type="number" [(ngModel)]="festivo.year">
+</md-input-container>
+<br>
+
+
+<md-input-container>
+<input mdInput placeholder="Festivo-1" type="date" [(ngModel)]="festivo.festivos[0]">
+</md-input-container>
+<br>
+
+<md-input-container>
+<input mdInput placeholder="Festivo-2" type="date" [(ngModel)]="festivo.festivos[1]">
+</md-input-container>
+<br>
+
+<md-input-container>
+<input mdInput placeholder="Festivo-3" type="date" [(ngModel)]="festivo.festivos[2]">
+</md-input-container>
+<br>
+
+<md-input-container>
+<input mdInput placeholder="Festivo-4" type="date" [(ngModel)]="festivo.festivos[3]">
+</md-input-container>
+<br>
+
+<md-input-container>
+<input mdInput placeholder="Festivo-5" type="date" [(ngModel)]="festivo.festivos[4]">
+</md-input-container>
+<br>
+
+<md-input-container>
+<input mdInput placeholder="Festivo-6" type="date" [(ngModel)]="festivo.festivos[5]">
+</md-input-container>
+<br>
+
+<md-input-container>
+<input mdInput placeholder="Festivo-7" type="date" [(ngModel)]="festivo.festivos[6]">
+</md-input-container>
+<br>
+
+<md-input-container>
+<input mdInput placeholder="Festivo-8" type="date" [(ngModel)]="festivo.festivos[7]">
+</md-input-container>
+<br>
+
+<md-input-container>
+<input mdInput placeholder="Festivo-9" type="date" [(ngModel)]="festivo.festivos[8]">
+</md-input-container>
+<br>
+
+<md-input-container>
+<input mdInput placeholder="Festivo-10" type="date" [(ngModel)]="festivo.festivos[9]">
+</md-input-container>
+<br>
+
+<md-input-container>
+<input mdInput placeholder="Festivo-11" type="date" [(ngModel)]="festivo.festivos[10]">
+</md-input-container>
+<br>
+
+<md-input-container>
+<input mdInput placeholder="Festivo-12" type="date" [(ngModel)]="festivo.festivos[11]">
+</md-input-container>
+<br>
+
+<md-input-container>
+<input mdInput placeholder="Festivo-13" type="date" [(ngModel)]="festivo.festivos[12]">
+</md-input-container>
+<br>
+
+<md-input-container>
+<input mdInput placeholder="Festivo-14" type="date" [(ngModel)]="festivo.festivos[12]">
+</md-input-container>
+<br>
+
+<md-input-container>
+<input mdInput placeholder="Festivo-15" type="date" [(ngModel)]="festivo.festivos[14]">
+</md-input-container>
+<br>
+
+<div>
+  <button md-button color="primary" (click)="guardarFestivo()">Guardar</button>
+</div>
+<br>
+<md-card>
+  {{ festivo | json}}
+</md-card>
+

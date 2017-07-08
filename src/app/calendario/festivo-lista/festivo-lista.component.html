@@ -1,0 +1,13 @@
+<p>
+  Lista de Años
+</p>
+<md-list>
+  <md-list-item *ngFor="let festivo of festivos">
+    <p md-line>
+      <span> {{festivo.year}} </span>
+      <span> - </span>
+      <span (click)="borrarFestivo(festivo)">Borrar</span>
+      <span> - </span> 
+     <a [routerLink]="['/festivos/',  festivo._id ]">Editar</a> 
+  </md-list-item>
+</md-list>

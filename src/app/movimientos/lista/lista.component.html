@@ -1,0 +1,25 @@
+<p>
+  Lista Tareas
+</p>
+<md-list>
+  <md-list-item *ngFor="let movimiento of movimientos">
+    <p md-line>
+      <span> {{movimiento.fechaStart | date: "d/M/yy h:mm a"}} </span>
+      <span> - </span>
+      <span> {{movimiento.fechaEnd | date: "d/M/yy h:mm a"}} </span>
+      <span> - </span>
+      <span> {{proyectos[movimiento.proyecto - 1].text}} </span>
+      <span> - </span>
+      <span> {{movimiento.expedientesFinalizados}} </span>
+      <span> - </span>
+      <span> {{movimiento.expedientesRevisados}} </span><span> - </span>
+      <span> {{movimiento.expedientesIncidentados}} </span><span> - </span>
+      <span> - </span>
+      <span (click)="borrarMovimiento(movimiento)">Borrar</span>
+      <span> - </span> 
+     <a [routerLink]="['/movimientos/',  movimiento._id ]">Editar</a> 
+
+
+    </p>
+  </md-list-item>
+</md-list>

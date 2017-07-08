@@ -1,0 +1,16 @@
+<p>
+  festivos works!
+</p>
+
+<h2>Gestión de Festivos</h2>
+
+<!--[popiedades]="para enviar información a componentes hijos"-->
+<!--(eventos)="para recibir información de componentes hijos"-->
+<app-festivo-nuevo 
+  [festivo]="festivo" 
+  (guardar)="guardarFestivo()">
+</app-festivo-nuevo>
+<app-festivo-lista 
+  [festivos]="festivos"
+  (borrar)="borrarFestivo($event)">
+</app-festivo-lista>
